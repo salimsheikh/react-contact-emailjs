@@ -68,3 +68,46 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+```js
+npx create-react-app react-contact-emailjs
+````
+
+Only  EmailJS
+
+````js
+npm install --save @emailjs/browser
+````
+
+Width axios
+
+````js
+npm install --save @emailjs/browser axios
+````
+
+````js
+npm start
+````
+
+
+
+````js
+import emailjs from '@emailjs/browser';
+````
+
+````js
+ emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+````
